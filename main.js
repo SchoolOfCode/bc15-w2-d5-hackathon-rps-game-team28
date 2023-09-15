@@ -5,6 +5,7 @@ let computerScore = 0;
 let secondPlayerChoice = "";
 let secondPlayerScore = 0;
 let playerName = "";
+let playerTwoName = "";
 
 //above we have declared variables
 function gameStart(){
@@ -92,35 +93,35 @@ function gameStart(){
 */          
             if (secondPlayerChoice === 1){
                 secondPlayerChoice = "rock";
-                console.log("Player 2 picks Rock");
+                console.log(`${playerTwoName} picks Rock`);
             } else if (secondPlayerChoice === 2){
                 secondPlayerChoice = "paper";
-                console.log("Player 2 picks paper");
+                console.log(`${playerTwoName} picks paper`);
             } else if (secondPlayerChoice === 3){
                 secondPlayerChoice = "scissors";
-                console.log("Player 2 picks scissors");
+                console.log(`${playerTwoName} picks scissors`);
             };
             //above is the computer choice
             if (playerChoice === secondPlayerChoice){
-                console.log(`It's a draw, try again! Your score is ${playerScore} and the Player 2 score is ${secondPlayerScore}`)
+                console.log(`It's a draw, try again! ${playerName}'s choice is ${playerScore} and the ${playerTwoName}'s score is ${secondPlayerScore}`)
             //aboce is if a draw out put same choice 
         } else if(playerChoice === "rock" && secondPlayerChoice === "scissors" 
             || playerChoice === "scissors" && secondPlayerChoice === "paper" 
             || playerChoice === "paper" && secondPlayerChoice === "rock"){
                 playerScore ++;
-                console.log(`You won that round. Player 1 score is ${playerScore} and the Player 2 score is ${secondPlayerScore}`);
+                console.log(`${playerName} won that round. ${playerName}'s score is ${playerScore} and the ${playerTwoName}'s score is ${secondPlayerScore}`);
             }
             //above is if player wins
             else {
                 secondPlayerScore ++;
-                console.log(`Player 2 won that round. Player 2 score is ${secondPlayerScore} and Player 1 score is ${playerScore}`);
+                console.log(`${playerTwoName} won that round. ${playerTwoName}'s score is ${secondPlayerScore} and ${playerName} score is ${playerScore}`);
             }
             //above is computer wins 
         
             if (gameModeLength == 3){
         
-                if (computerScore === 3){
-                    console.log("Computer won")
+                if (secondPlayerScore === 3){
+                    console.log(`${playerTwoName} won`)
                     break;
                 } else if (playerScore === 3){
                     console.log("Player won")
@@ -129,11 +130,11 @@ function gameStart(){
                 }}
                 if (gameModeLength == 5){
             
-                    if (computerScore === 5){
-                        console.log("Computer won")
+                    if (secondPlayerScore === 5){
+                        console.log(`${playerTwoName} won`)
                         break;
                     } else if (playerScore === 5){
-                        console.log("Player won")
+                        console.log(`${playerName} won`)
                         break;
             }
     }
