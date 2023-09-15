@@ -8,7 +8,7 @@ function gameStart(){
     console.log(gameModeChoice)
     */
 while (computerScore || playerScore !== 3){
-    playerChoice = prompt("Please choose: Rock, paper or scissors");
+    playerChoice = prompt("Please choose: Rock, Paper or Scissors");
     console.log(playerChoice.toLowerCase());
     // above is to take the players choice
     computerChoice = Math.floor(Math.random() * 3 + 1);
@@ -24,18 +24,18 @@ while (computerScore || playerScore !== 3){
     };
     //above is the computer choice
     if (playerChoice === computerChoice){
-        console.log("Same choice try again")
+        console.log(`It's a draw, try again! Your score is ${playerScore} and the computers score is ${computerScore}`)
     //aboce is if a draw out put same choice 
 } else  if(playerChoice === "rock" && computerChoice === "scissors" 
     || playerChoice === "scissors" && computerChoice === "paper" 
     || playerChoice === "paper" && computerChoice === "rock"){
         playerScore ++;
-        console.log(`You won that round. Your score is ${playerScore}`);
+        console.log(`You won that round. Your score is ${playerScore} and the computers score is ${computerScore}`);
     }
     //above is if player wins
     else {
         computerScore ++;
-        console.log(`Computer won that round. Computer score is ${computerScore}`);
+        console.log(`Computer won that round. Computer score is ${computerScore} and your score is ${playerScore}`);
     }
     //above is computer wins 
 
