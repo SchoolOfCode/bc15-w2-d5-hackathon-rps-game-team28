@@ -51,7 +51,51 @@ function gameStart(){
             }
         }
     }
+    if (gameModeChoice === 2){
+        while (playerScore || secondPlayerScore !== 3){
+            playerChoice = prompt("Please choose: Rock, Paper or Scissors");
+            console.log(playerChoice.toLowerCase());
+            // above is to take the players choice
+            secondPlayerChoice = prompt("Please choose: Rock, Paper or Scissors");
+            console.log(playerChoice.toLowerCase());
 
+            
+            if (secondPlayerChoice === 1){
+                secondPlayerChoice = "rock";
+                console.log("Player 2 picks Rock");
+            } else if (secondPlayerChoice === 2){
+                secondPlayerChoice = "paper";
+                console.log("Player 2 picks paper");
+            } else if (secondPlayerChoice === 3){
+                secondPlayerChoice = "scissors";
+                console.log("Player 2 picks scissors");
+            };
+            //above is the computer choice
+            if (playerChoice === secondPlayerChoice){
+                console.log(`It's a draw, try again! Your score is ${playerScore} and the Player 2 score is ${secondPlayerScore}`)
+            //aboce is if a draw out put same choice 
+        } else  if(playerChoice === "rock" && secondPlayerChoice === "scissors" 
+            || playerChoice === "scissors" && secondPlayerChoice === "paper" 
+            || playerChoice === "paper" && secondPlayerChoice === "rock"){
+                playerScore ++;
+                console.log(`You won that round. Player 1 score is ${playerScore} and the Player 2 score is ${secondPlayerScore}`);
+            }
+            //above is if player wins
+            else {
+                secondPlayerScore ++;
+                console.log(`Player 2 won that round. Player 2 score is ${secondPlayerScore} and Player 1 score is ${playerScore}`);
+            }
+            //above is computer wins 
+        
+            if (scecondPlayerScore === 3){
+                console.log("Player 2 has won")
+                break;
+            } else if (playerScore === 3){
+                console.log("Player 1 won")
+                break;
+            }
+        }
+    }
 
 }
 
