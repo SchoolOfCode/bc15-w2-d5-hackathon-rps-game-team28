@@ -84,10 +84,10 @@ function gameStart(){
             alert(`Hello ${playerTwoName}`);    
 
         while (playerScore || secondPlayerScore !== 3){
-            playerChoice = prompt(`${playerName} Please choose: Rock, Paper or Scissors`);
+            playerChoice = prompt(`${playerName}, Please choose: Rock, Paper or Scissors`);
             console.log(playerChoice.toLowerCase());
             // above is to take the players choice
-            secondPlayerChoice = prompt(`${playerTwoName} Please choose Player 2: Rock, Paper or Scissors`);
+            secondPlayerChoice = prompt(`${playerTwoName}, Please choose: Rock, Paper or Scissors`);
             console.log(secondPlayerChoice.toLowerCase());
 /*  Ensures right spelling of inputs
             if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors"){
