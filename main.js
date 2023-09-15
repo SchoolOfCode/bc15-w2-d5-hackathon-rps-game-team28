@@ -9,7 +9,7 @@ let secondPlayerScore = 0;
 function gameStart(){
     let gameModeChoice = prompt("Would you like to play 1 player or 2 player?");
 
-    if (gameModeChoice === 1){
+    if (gameModeChoice == 1){
         while (computerScore || playerScore !== 3){
             playerChoice = prompt("Please choose: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
@@ -51,13 +51,13 @@ function gameStart(){
             }
         }
     }
-    if (gameModeChoice === 2){
+    if (gameModeChoice == 2){
         while (playerScore || secondPlayerScore !== 3){
-            playerChoice = prompt("Please choose: Rock, Paper or Scissors");
+            playerChoice = prompt("Please choose Player 1: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
             // above is to take the players choice
-            secondPlayerChoice = prompt("Please choose: Rock, Paper or Scissors");
-            console.log(playerChoice.toLowerCase());
+            secondPlayerChoice = prompt("Please choose Player 2: Rock, Paper or Scissors");
+            console.log(secondPlayerChoice.toLowerCase());
 
             
             if (secondPlayerChoice === 1){
@@ -87,7 +87,7 @@ function gameStart(){
             }
             //above is computer wins 
         
-            if (scecondPlayerScore === 3){
+            if (secondPlayerScore === 3){
                 console.log("Player 2 has won")
                 break;
             } else if (playerScore === 3){
