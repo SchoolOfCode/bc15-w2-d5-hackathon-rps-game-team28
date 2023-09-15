@@ -15,6 +15,13 @@ function gameStart(){
         while (computerScore || playerScore !== 3){
             playerChoice = prompt("Please choose: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
+           /* Ensures correct spelling
+            if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors"){
+                alert("Wrong Input, check your spelling!")
+                continue;
+            }
+
+            */
             // above is to take the players choice
             computerChoice = Math.floor(Math.random() * 3 + 1);
             if (computerChoice === 1){
@@ -65,10 +72,7 @@ function gameStart(){
                     break;
         }
     }    
-
-            
-
-
+    }}  
     
     if (gameModeChoice == 2){
         while (playerScore || secondPlayerScore !== 3){
@@ -77,8 +81,13 @@ function gameStart(){
             // above is to take the players choice
             secondPlayerChoice = prompt("Please choose Player 2: Rock, Paper or Scissors");
             console.log(secondPlayerChoice.toLowerCase());
-
-            
+/*  Ensures right spelling of inputs
+            if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors"){
+                alert("Wrong input, check your spelling!")
+            } else if (secondPlayerChoice !== "rock" && secondPlayerChoice !== "paper" && secondPlayerChoice !== "scissors"){
+                alert("Wrong input, check your spelling!");
+            }
+*/          
             if (secondPlayerChoice === 1){
                 secondPlayerChoice = "rock";
                 console.log("Player 2 picks Rock");
@@ -93,7 +102,7 @@ function gameStart(){
             if (playerChoice === secondPlayerChoice){
                 console.log(`It's a draw, try again! Your score is ${playerScore} and the Player 2 score is ${secondPlayerScore}`)
             //aboce is if a draw out put same choice 
-        } else  if(playerChoice === "rock" && secondPlayerChoice === "scissors" 
+        } else if(playerChoice === "rock" && secondPlayerChoice === "scissors" 
             || playerChoice === "scissors" && secondPlayerChoice === "paper" 
             || playerChoice === "paper" && secondPlayerChoice === "rock"){
                 playerScore ++;
@@ -126,7 +135,6 @@ function gameStart(){
                         break;
             }
     }
-
-        }}}}}
+}}}
         
 gameStart()
