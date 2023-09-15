@@ -13,15 +13,16 @@ function gameStart(){
    
 
     if (gameModeChoice == true){
+        playerName = prompt("What is your name?")
         while (computerScore || playerScore !== 3){
             playerChoice = prompt("Please choose: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
-           /* Ensures correct spelling
-            if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors"){
+           // Ensures correct spelling
+           /*
+            if (playerChoice !== "rock" || "Rock" && playerChoice !== "paper" || "Paper" && playerChoice !== "scissors" || "Scissors"){
                 alert("Wrong Input, check your spelling!")
                 continue;
             }
-
             */
             // above is to take the players choice
             computerChoice = Math.floor(Math.random() * 3 + 1);
@@ -37,18 +38,18 @@ function gameStart(){
             };
             //above is the computer choice
             if (playerChoice === computerChoice){
-                console.log(`It's a draw, try again! Your score is ${playerScore} and the computers score is ${computerScore}`)
+                console.log(`It's a draw, try again! ${playerName}'s is ${playerScore} and the computers score is ${computerScore}`)
             //aboce is if a draw out put same choice 
-        } else  if(playerChoice === "rock" && computerChoice === "scissors" 
+        } else if(playerChoice === "rock" && computerChoice === "scissors" 
             || playerChoice === "scissors" && computerChoice === "paper" 
             || playerChoice === "paper" && computerChoice === "rock"){
                 playerScore ++;
-                console.log(`You won that round. Your score is ${playerScore} and the computers score is ${computerScore}`);
+                console.log(`You won that round. ${playerName}'s is ${playerScore} and the computers score is ${computerScore}`);
             }
             //above is if player wins
             else {
                 computerScore ++;
-                console.log(`Computer won that round. Computer score is ${computerScore} and your score is ${playerScore}`);
+                console.log(`Computer won that round. Computer score is ${computerScore} and ${playerName}'s is ${playerScore}`);
             }
             //above is computer wins 
 
@@ -59,7 +60,7 @@ function gameStart(){
                 console.log("Computer won")
                 break;
             } else if (playerScore === 3){
-                console.log("Player won")
+                console.log(`${playerName} won`)
                 break;
     
             }}
@@ -69,7 +70,7 @@ function gameStart(){
                     console.log("Computer won")
                     break;
                 } else if (playerScore === 5){
-                    console.log("Player won")
+                    console.log(`${playerName}`)
                     break;
         }
     }    
