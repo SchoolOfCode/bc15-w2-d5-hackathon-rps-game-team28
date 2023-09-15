@@ -4,14 +4,15 @@ let playerScore = 0;
 let computerScore = 0;
 let secondPlayerChoice = "";
 let secondPlayerScore = 0;
+let playerName = "";
 
 //above we have declared variables
 function gameStart(){
-    let gameModeChoice = prompt("Would you like to play 1 player or 2 player?");
-    let gameModeLength = prompt("Do you want to play up to 3 or 5?");
+    let gameModeChoice = confirm("If you are playing alone press OK! If not press CANCEL!");
+    let gameModeLength = prompt("Do you want to play up to the score of 3 or 5?");
    
 
-    if (gameModeChoice == 1){
+    if (gameModeChoice == true){
         while (computerScore || playerScore !== 3){
             playerChoice = prompt("Please choose: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
@@ -74,7 +75,7 @@ function gameStart(){
     }    
     }}  
     
-    if (gameModeChoice == 2){
+    if (gameModeChoice == false){
         while (playerScore || secondPlayerScore !== 3){
             playerChoice = prompt("Please choose Player 1: Rock, Paper or Scissors");
             console.log(playerChoice.toLowerCase());
