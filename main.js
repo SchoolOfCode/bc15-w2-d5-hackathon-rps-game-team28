@@ -8,6 +8,8 @@ let secondPlayerScore = 0;
 //above we have declared variables
 function gameStart(){
     let gameModeChoice = prompt("Would you like to play 1 player or 2 player?");
+    let gameModeLength = prompt("Do you want to play up to 3 or 5?");
+   
 
     if (gameModeChoice == 1){
         while (computerScore || playerScore !== 3){
@@ -41,6 +43,9 @@ function gameStart(){
                 console.log(`Computer won that round. Computer score is ${computerScore} and your score is ${playerScore}`);
             }
             //above is computer wins 
+
+
+            if (gameModeLength == 3){
         
             if (computerScore === 3){
                 console.log("Computer won")
@@ -48,9 +53,23 @@ function gameStart(){
             } else if (playerScore === 3){
                 console.log("Player won")
                 break;
-            }
+    
+            }}
+            if (gameModeLength == 5){
+        
+                if (computerScore === 5){
+                    console.log("Computer won")
+                    break;
+                } else if (playerScore === 5){
+                    console.log("Player won")
+                    break;
         }
-    }
+    }    
+
+            
+
+
+    
     if (gameModeChoice == 2){
         while (playerScore || secondPlayerScore !== 3){
             playerChoice = prompt("Please choose Player 1: Rock, Paper or Scissors");
@@ -87,16 +106,27 @@ function gameStart(){
             }
             //above is computer wins 
         
-            if (secondPlayerScore === 3){
-                console.log("Player 2 has won")
-                break;
-            } else if (playerScore === 3){
-                console.log("Player 1 won")
-                break;
+            if (gameModeLength == 3){
+        
+                if (computerScore === 3){
+                    console.log("Computer won")
+                    break;
+                } else if (playerScore === 3){
+                    console.log("Player won")
+                    break;
+        
+                }}
+                if (gameModeLength == 5){
+            
+                    if (computerScore === 5){
+                        console.log("Computer won")
+                        break;
+                    } else if (playerScore === 5){
+                        console.log("Player won")
+                        break;
             }
-        }
     }
 
-}
-
-gameStart();
+        }}}}}
+        
+gameStart()
