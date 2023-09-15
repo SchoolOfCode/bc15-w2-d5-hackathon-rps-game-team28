@@ -8,20 +8,23 @@ function gameStart(){
     console.log(gameModeChoice)
     */
 
-    playerChoice = prompt("Please choose: 1.Rock, 2.paper or 3.scissors");
+    playerChoice = prompt("Please choose: Rock, paper or scissors");
     console.log(playerChoice.toLowerCase());
     
     computerChoice = Math.floor(Math.random() * 3 + 1);
     console.log(computerChoice);
     if (computerChoice === 1){
+        computerChoice = "rock";
         console.log("Computer picks Rock");
     } else if (computerChoice === 2){
+        computerChoice = "paper";
         console.log("Computer picks paper");
     } else if (computerChoice === 3){
-        console.log("Computer picks rock");
+        computerChoice = "scissors";
+        console.log("Computer picks scissors");
     };
 
-    if (playerChoice == computerChoice){
+    if (playerChoice === computerChoice){
         console.log("Same choice try")
     } else if(playerChoice === "rock" && computerChoice === "scissors"){
             console.log("You won that round")
