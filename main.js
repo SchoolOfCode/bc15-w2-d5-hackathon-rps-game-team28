@@ -7,7 +7,7 @@ function gameStart(){
     /*(let gameModeChoice = prompt("Choose Game mode. Best of 3 or 5?");
     console.log(gameModeChoice)
     */
-
+for (i = 0; i <= 2; i++){
     playerChoice = prompt("Please choose: Rock, paper or scissors");
     console.log(playerChoice.toLowerCase());
     // above is to take the players choice
@@ -31,17 +31,15 @@ function gameStart(){
     || playerChoice === "scissors" && computerChoice === "paper" 
     || playerChoice === "paper" && computerChoice === "rock"){
         playerScore ++;
-            console.log("You won that round");
-            console.log(playerScore);
+        console.log(`You won that round. Your score is ${playerScore}`);
     }
     //above is if player wins
     else {
         computerScore ++;
-        console.log('Computer wins')
-        console.log(computerScore)
+        console.log(`Computer won that round. Computer score is ${computerScore}`);
     }
     //above is computer wins 
 }
-
+}
 
 gameStart();
