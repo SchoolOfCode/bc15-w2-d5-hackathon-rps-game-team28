@@ -27,28 +27,14 @@ function gameStart(){
     if (playerChoice === computerChoice){
         console.log("Same choice try")
 
-} 
-    if(playerChoice === "rock" && computerChoice === "scissors"){
+} else if(playerChoice === "rock" && computerChoice === "scissors" 
+    || playerChoice === "scissors" && computerChoice === "paper" 
+    || playerChoice === "paper" && computerChoice === "rock"){
             console.log("You won that round")
     }
     else {console.log('Computer wins')
     }
-
-
-
-    if(playerChoice === "scissors" && computerChoice === "paper"){
-            console.log("You won that round")
-    } 
-    else { (console.log('Computer wins'))
- } 
- 
-    if(playerChoice === "paper" && computerChoice === "rock")
-    {
-            console.log("You won that round")
-        }
-    else { (console.log)('Computer wins')
-    }}
-    
+}
 
 
 gameStart();
