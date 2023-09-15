@@ -2,7 +2,7 @@ let playerChoice = "";
 let computerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
-
+//above we have declared variables
 function gameStart(){
     /*(let gameModeChoice = prompt("Choose Game mode. Best of 3 or 5?");
     console.log(gameModeChoice)
@@ -10,7 +10,7 @@ function gameStart(){
 
     playerChoice = prompt("Please choose: Rock, paper or scissors");
     console.log(playerChoice.toLowerCase());
-    
+    // above is to take the players choice
     computerChoice = Math.floor(Math.random() * 3 + 1);
     console.log(computerChoice);
     if (computerChoice === 1){
@@ -23,17 +23,24 @@ function gameStart(){
         computerChoice = "scissors";
         console.log("Computer picks scissors");
     };
-
+    //above is the computer choice
     if (playerChoice === computerChoice){
         console.log("Same choice try")
-
+    //aboce is if a draw out put same choice 
 } else if(playerChoice === "rock" && computerChoice === "scissors" 
     || playerChoice === "scissors" && computerChoice === "paper" 
     || playerChoice === "paper" && computerChoice === "rock"){
-            console.log("You won that round")
+        playerScore ++;
+            console.log("You won that round");
+            console.log(playerScore);
     }
-    else {console.log('Computer wins')
+    //above is if player wins
+    else {
+        computerScore ++;
+        console.log('Computer wins')
+        console.log(computerScore)
     }
+    //above is computer wins 
 }
 
 
